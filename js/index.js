@@ -31,10 +31,8 @@ const backgroundColorChange = document.querySelector('html')
 
  backgroundColorChange.addEventListener('keydown', (event) =>{
     event.target.style.backgroundImage = 'linear-gradient(#FF5F6D, #FFC371)';
-
-    setTimeout(() => {
-        event.target.style.backgroundImage = '';
-    }, 500);
+    event.stopPropagation();
+    event.preventDefault();
 });
 
 const mainNavigation = document.querySelector('.main-navigation');
